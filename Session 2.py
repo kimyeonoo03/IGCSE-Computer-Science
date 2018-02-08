@@ -11,6 +11,5 @@ highest_score = 0
 for y in range (0, number - 1):
     if highest_score < score_list[y]:
         highest_score = score_list[y]
-
 if highest_score == score_list[y]:
     print (name_list[y],score_list[y])
