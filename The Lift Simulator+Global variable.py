@@ -35,18 +35,17 @@ def SetDestination():
         elif lift == floor:
             print ("You are on the floor you want to reach. You are such an idiot!")
             floor = int(input("Please enter a valid floor"))
-        elif 1 <= floor <= 10:
+        elif floor != lift and 1 <= floor <= 10:
             if lift > floor:
-                for y in range (floor, lift + 1, -1):
+                for y in reversed(range(floor, lift + 1)):
                     print (y)
-                lift = floor
+                print ("Get out. Watch your step.")
+                break
             elif lift < floor:
                 for z in range (lift, floor + 1):
                     print (z)
-                lift = floor
                 print ("Get out. Watch your step.")
                 break
-
 
 def MoveUp():
     global lift
@@ -58,3 +57,4 @@ def MoveDown():
 
 CallLift()
 SetDestination()
+
